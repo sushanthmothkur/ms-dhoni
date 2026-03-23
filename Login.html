@@ -1,24 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background: #2b5876;
+            
+            background: -webkit-linear-gradient(to right, #4e4376, #2b5876);
+            
+            background: linear-gradient(to right, #4e4376, #2b5876);/
+        }
+
+        body a {
+            text-decoration: none;
+            color: #2f56a9;
+
+        }
+
+        .parent {
+            background-color: rgba(225, 255, 255, 0.2);
+            backdrop-filter: blur(4px);
+            width: 26%;
+            margin: 5% auto 0% auto;
+            border-radius: 10px;
+            padding: 10px 10px 30px 10px;
+            text-align: center;
+            font-family: sans-serif;
+            box-shadow: 0px 1px 30px rgba(225, 255, 255, 0.7);
+        }
+
+        .parent div {
+            margin: 3% 0%;
+        }
+
+        .form-field input {
+            padding: 15px 10px;
+            width: 80%;
+            border-radius: 10px;
+            border: none;
+            background-color: rgba(225, 255, 255, 0.3);
+        }
+
+        .form-field::input-placeholder {
+            color: white;
+        }
+
+        .form-checbox {
+            display: flex;
+            justify-content: space-between;
+            /* horizontal*/
+            align-items: center;
+            /* vertical*/
+            width: 80%;
+            margin: auto !important;
+            padding: 0px 10px;
+
+        }
+
+        .form-field button {
+            background-color: #234ead;
+            border-radius: 10px;
+            color: white;
+            border: none;
+            width: 85%;
+            padding: 15px 20px;
+        }
+
+        .form-links {
+
+            width: 85%;
+            margin: 10% auto !important;
+
+        }
+
+        .form-links a {
+
+            border-radius: 10px;
+            width: 80% !important;
+            padding: 15px 11%;
+            background-color: rgba(225, 255, 255, 0.3);
+            margin: 0px 10px;
+            color: white !important;
+        }
+    </style>
+
+
+
 </head>
+
 <body>
-    <form action="./biography.html" method="get">
-    <center>
-    <title>login</title>
-    <h1 >Login</h1>
-    
-        <p>
-            <input type="email" name="email" placeholder="Enter your email" required/>
-        </p>
-        <p>
-            <input type="password" name="password" placeholder="Enter your password" required/>
-        </p>
-        <button type="login">Login</button>
-</center>
-</form>
+    <form class="parent" action="./biography.html">
+        <h2>Welcome Back</h2>
+        <p>Sign in to your account</p>
+        <div class="form-field">
+            <input type="email" placeholder="Email Address">
+        </div>
+
+        <div class="form-field">
+            <input type="password" placeholder="Password">
+
+        </div>
+        <div class="form-checbox">
+            <div>
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            <a href="">forgot password?</a>
+        </div>
+        <div class="form-field">
+            <button>Sign In</button>
+        </div>
+        <div class="form-field">
+            or continue with
+        </div>
+        <div class="form-links">
+            <a href=""><i class="fa-brands fa-google"></i>Google</a>
+            <a href=""><i class="fa-brands fa-github"></i>Github</a>
+        </div>
+        <div class="form-field">
+            Dont have an account?
+            <a href="">Sign Up</a>
+        </div>
+    </form>
 </body>
+
 </html>

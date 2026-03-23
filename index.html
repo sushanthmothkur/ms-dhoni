@@ -4,69 +4,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>register_page</title>
+    <style>
+        body {
+            background: #00416A;
+            
+            background: -webkit-linear-gradient(to right, #E4E5E6, #00416A);
+            
+            background: linear-gradient(to right, #E4E5E6, #00416A);
+            
+
+        }
+
+        .sushu{
+            background-color: transparent;
+            width: 25%;
+            margin: 5% auto 5% auto;
+            backdrop-filter: blur(100px);
+            height: 940px;
+            text-align: center;
+            font-family: sans-serif;
+            padding: 10px 25px;
+            box-shadow: 0px 2px 40px rgba(248, 249, 249, 0.6);
+
+        }
+
+        .sushu div {
+            margin: 3% 0%;
+        }
+
+        .form-field input {
+            padding: 10px;
+            width: 80%;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .gender {
+            display: flex;
+            padding: 6px;
+            width: 80%;
+            gap: 6px;
+            margin: auto !important;
+        }
+
+        .form-edu {
+            display: flex;
+            padding: 10px;
+            gap: 7px;
+            width: 80%;
+            margin: auto !important;
+        }
+
+        .form-date {
+            display: flex;
+            gap: 7px;
+            padding: 10px;
+            width: 80%;
+            margin: auto !important;
+        }
+
+        .file {
+
+            padding: 10px;
+            width: 80%;
+
+
+        }
+
+        .form-city {
+            display: flex;
+            padding: 10px;
+            width: 80%;
+            margin: auto !important;
+        }
+
+        .form-address {
+            padding: 10px;
+            width: 80%;
+        }
+
+        .form-sub button {
+            background-color: #4ea1d7;
+            color: white;
+            padding: 10px;
+            width: 80%;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
+
 <body>
-    <form action="./Login.html" method="get">
-        <p>
-            <input type="text" name="name" placeholder="Enter your name">
-        </p>
-        <p>
-            <input type="email" name="email" placeholder="Enter your email" required/>
-        </p>
-        <p>
-            <input type="password" name="password" placeholder="Enter your password" required/>
-        </p>
-        <p>
-            <input type="tel" name="phone" placeholder="Enter your phone number" required/>
-        </p>
-        <p>
-            <textarea name="address" id="address"placeholder="Enter your Address" required></textarea>
-            
-        </p>
+    <form class="sushu" action="./login.html">
+        <h2>REGISTER</h2>
+        <div class="form-field">
+            <div align="left">Name :</div>
+            <input type="text" placeholder="Enter your name" name="name" id="name" required />
 
-        <p>
-            <input type="radio" name="gender" value="male"> Male
-            <input type="radio" name="gender" value="female"> Female    
-        </p>
-        <p>
-            <label for="BOD">date of birth:</label>
-            <input type="date" name="" id="">
- 
-            in
-        </p>
+        </div>
+        <div class="form-field">
+            <div align="left">Email :</div>
+            <input type="email" placeholder="Email" name="mail" required />
+        </div>
+        <div class="form-field">
+            <div align="left">Password :</div>
+            <input type="password" placeholder="Enter Password" name="pass" required />
+        </div>
+        <div class="form-field">
+            <div align="left">Number :</div>
+            <input type="number" placeholder="Enter mobile number" required>
+        </div>
+        <div align="left">Date of birth :</div>
+        <div class="form-date">
+
+            <input type="date" required />
+        </div>
+
+        <div class="form-checbox1">
+            <div align="left">Gender :</div>
+            <div class="gender">
+                <input type="radio" name="gender" id="gmale" value="male" required />
+                <label for="gmale">Male</label>
+            </div>
+            <div class="gender">
+
+                <input type="radio" name="gender" id="gfemale" value="female" required />
+                <label for="gfemale">Female</label>
+            </div>
+        </div>
 
 
 
-        <p>
-            <label for="city">Choose a city:</label>
 
-            <select name="city" id="city">
-                <option value="">Select a city</option>
+        <div align="left">Date of birth :</div>
+        <div class="form-edu">
 
-                <option value="hyderabad">Hyderabad</option>
-                <option value="vijaywada">vijaywada</option>
-                <option value="karnakata">karnakata</option>
+            <input type="checkbox" id="gdipl" value="10th" />
+            <label for="gdipl">10th</label>
+            <input type="checkbox" id="finter" value="inter" />
+            <label for="finter">Inter</label>
+            <input type="checkbox" id="diploma" value="diploma" />
+            <label for="diploma">Diploma</label>
+            <input type="checkbox" id="gbtech" value="btech" />
+            <label for="gbtech">Btech</label>
+
+        </div>
+
+
+
+
+        <div align="left">Select image :</div>
+        <div class="file">
+            <input type="file" accept="img/*" class="profile" required />
+        </div>
+
+
+
+        <div align="left">Select city :</div>
+        <div class="form-city">
+            <select required>
+                <option value="">Select your city</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Rajahmundry">Rajahmundry</option>
+                <option value="Vizag">Vizag</option>
             </select>
-        </p>
-        <p>
-            <label>
-
-
-                <input type="checkbox" value="10th"> 10th
-                <input type="checkbox" value="inter"> inter
-                <input type="checkbox" value="b.tech"> b.tech
-
-            </label>
-        </p>
-        <input type="file" name="file">
-
-        </p>
-        <button type="Register">Register</button>
-
+        </div>
+        <div align="left">Enter address :</div>
+        <div class="address">
+            <textarea placeholder="Enter your address" rows="2" cols="40" required></textarea>
+        </div>
+        <div class="form-sub">
+            <button>Submit</button>
+        </div>
     </form>
-
 </body>
 
 </html>
